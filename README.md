@@ -38,7 +38,7 @@
 <summary><b>📖 Haz clic aquí para leer el desglose detallado paso a paso</b></summary>
 
 <br>
-##`Explicación detallada del código (Arquitectura):`
+##Explicación detallada del código (Arquitectura):
 * **Comenzamos con ayudar al usuario, enseñando el uso, para facilitar su uso dentro de la terminal. (`Uso: ./SysBackup-pro.sh <carpeta_a_respaldar> <destino_del_respaldo>`).
 * **Comenzamos creando las variables globales para el respaldo, y para que sea dinámico, con el uso de variables tipo "`$1`", siendo que `$1 y $2` son los textos después del nombre de fichero, y siendo `$0` el nombre del fichero. (`CARPETA_ORIGEN="$1" ; DESTINO_BACKUP="$2" ; FECHA=$(date +%Y-%m-%d_%H-%M-%S) ; NOMBRE_ARCH="backup_$FECHA.tar.gz"`).
 * **Comenzamos con la creación de la primera función ( `crear_respaldo() {` ), para poder hacer un mini-script dentro del script, para tener un mejor orden, además de que su uso, es para comprimir y empaquetar la carpeta, haciendo uso de los comandos de echo, para darle interactividad y entendimiento al script (`echo "[INFO] Iniciando compresión de la carpeta: $CARPETA_ORIGEN"`), y el comando `tar` con el parámetro "`-czf`" para comprimir (`tar -czf "$DESTINO_BACKUP/$NOMBRE_ARCH" "$CARPETA_ORIGEN"`), posteriormente con un echo, para efectos de interactividad y entendimiento del usuario. (`echo "[INFO] Respaldo guardado en: $DESTINO_BACKUP/$NOMBRE_ARCH"`), para posteriormente cerrar la función con "`}`" y seguir con el script.
@@ -51,9 +51,9 @@
 
 ## 🛠️ Requisitos Previos
 
-#Sistema Operativo basado en Linux / Unix.
-#Intérprete de shell bash.
-# Herramienta estándar tar.
+* **Sistema Operativo basado en Linux / Unix.
+* **Intérprete de shell bash.
+* **Herramienta estándar tar.
 
 ---
 
